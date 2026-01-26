@@ -5,11 +5,9 @@ import { AdminLayout } from "../components/layouts/AdminLayout";
 const AdminDashboardOverview = () => {
   return (
     <AdminLayout>
-      <div
-       
-      ></div>
+      <div className="dashboard "> Dashboard</div>
     </AdminLayout>
-  );
+  )
 };
 
 export default AdminDashboardOverview;

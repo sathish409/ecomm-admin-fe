@@ -1,37 +1,179 @@
-.rightbar{
-    backdrop-filter: blur(5px);
-
- width: 70%;
+.rightbar {
+  backdrop-filter: blur(3px);
+  width: 75%;
+  width: 100%;
+  height: 80px;
+  position: relative; /* allows z-index to work */
+  z-index: 1; /* sits above the sidebar */
+  padding-left: 30%;
 }
-.header{
-font-size: 1.5rem;
+.sidebar {
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  height: 100vh;
+  position: absolute;
+  top: 0; /* align with top of container */
+  left: 0;
+  z-index: 2; /* sits above the header */
 }
-.header .nav-link:hover{
-font-weight: bold;
-transition: color 0.3s ease, font-size 0.3s ease;
-
-
+.header {
+  font-size: 1.5rem;
 }
-.header .navbar-brand:hover{
-font-weight: bold;
-color: blue;
-transition: color 0.3s ease, font-size 0.3s ease;
-
+.nav-link:hover {
+  font-weight: bold;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  color: #ff6600 !important; /* your custom color */
+  display: flex;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.navbar-brand:hover {
+  font-weight: bold;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  color: #ff6600 !important; /* your custom color */
+  display: flex;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
 }
 .nav-link {
-  color: #ff6600 !important; /* your custom color */
 }
-.navbar-brand{
-      color: #ff6600 !important; /* your custom color */
-}
-.admin-layout{
+.navbar-brand {
   display: flex;
-
-
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
 }
-.sidebar{
-backdrop-filter: blur(5px);
+.admin-layout {
+  display: flex;
+  position: relative;
+}
+
+.admin-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+.dashboard {
+  min-height: 60vh;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  padding: 10px;
+}
+.main {
+  padding-right: 30px;
+  border-radius: 10px;
+
+  font-size: large;
+  box-sizing: border-box;
+  box-shadow: 10px;
+}
+
+/* login page */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  align-items: center;
+}
+.glass {
+  position: relative;
+  border-radius: 26px;
+  padding: 18px 20px;
+
+  background: rgba(102, 87, 87, 0.28);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+
+  border: 1px solid rgba(250, 249, 249, 0.945);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  color:white;
+  font-weight: bolder;
+}
+
+/* top highlight layer (gives  feel) */
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.02)
+  );
+  pointer-events: none;
+}
+
+/* keep content above the highlight */
+.glass > * {
+  position: relative;
+}
+/* Glass inputs inside the glass card */
+.loginForm {
+  width: 30rem;
+}
+.loginForm input,
+.loginForm select,
+.loginForm textarea {
+  width: 100%;
+  height: 42px;
+  padding: 10px 12px;
+
+  border-radius: 12px;
+
+  background:rgba(238, 235, 235, 0.16),; /* glass */
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  border: 1px solid white;
+
+  color: rgba(255, 255, 255, 0.92);
+  outline: none;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 25px rgba(0, 0, 0, 0.18);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+
+/* focus glow like iOS */
+.loginForm input:focus,
+.loginForm select:focus,
+.loginForm textarea:focus {
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 12px 30px rgba(0, 0, 0, 0.22);
+
+  background: rgba(255, 255, 255, 0.16);
+}
+.btn{
 display: flex;
-  flex-direction: row;
-  width: 30%;
+justify-content: center;
+align-items: center;
+width: auto;
+
 }

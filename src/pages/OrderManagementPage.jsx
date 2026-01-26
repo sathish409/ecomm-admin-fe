@@ -1,8 +1,13 @@
 import React from 'react'
+import { AdminLayout } from '../components/layouts/AdminLayout'
 
 const OrderManagementPage = () => {
   return (
-    <div>OrderManagementPage</div>
+  <AdminLayout>
+      <div
+    
+>OrderManagementPage</div>
+    </AdminLayout>
   )
 }
 

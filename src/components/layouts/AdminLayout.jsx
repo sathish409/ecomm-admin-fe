@@ -12,13 +12,13 @@ export const AdminLayout = ({children, title}) => {
               height: "100vh",
               width: "100%",
             }}>
-   <div className="sidebar">
+   <div className="sidebar text-white">
       <AdminSidebar/>
    </div>
       
      
         {/* admin header */}
-        <div className="rightbar">
+        <div className="rightbar text-white">
 <AdminHeader/>
 <div className="p-3">
     <h4>{title}</h4>
